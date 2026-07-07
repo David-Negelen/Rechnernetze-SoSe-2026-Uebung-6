@@ -1,0 +1,514 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-06-29 20:32 +0200
+Nmap scan report for i59F47B00.versanet.de (89.244.123.0)
+Host is up.
+Nmap scan report for i59F47B01.versanet.de (89.244.123.1)
+Host is up.
+Nmap scan report for i59F47B02.versanet.de (89.244.123.2)
+Host is up.
+Nmap scan report for i59F47B03.versanet.de (89.244.123.3)
+Host is up.
+Nmap scan report for i59F47B04.versanet.de (89.244.123.4)
+Host is up.
+Nmap scan report for i59F47B05.versanet.de (89.244.123.5)
+Host is up.
+Nmap scan report for i59F47B06.versanet.de (89.244.123.6)
+Host is up.
+Nmap scan report for i59F47B07.versanet.de (89.244.123.7)
+Host is up.
+Nmap scan report for i59F47B08.versanet.de (89.244.123.8)
+Host is up.
+Nmap scan report for i59F47B09.versanet.de (89.244.123.9)
+Host is up.
+Nmap scan report for i59F47B0A.versanet.de (89.244.123.10)
+Host is up.
+Nmap scan report for i59F47B0B.versanet.de (89.244.123.11)
+Host is up.
+Nmap scan report for i59F47B0C.versanet.de (89.244.123.12)
+Host is up.
+Nmap scan report for i59F47B0D.versanet.de (89.244.123.13)
+Host is up.
+Nmap scan report for i59F47B0E.versanet.de (89.244.123.14)
+Host is up.
+Nmap scan report for i59F47B0F.versanet.de (89.244.123.15)
+Host is up.
+Nmap scan report for i59F47B10.versanet.de (89.244.123.16)
+Host is up.
+Nmap scan report for i59F47B11.versanet.de (89.244.123.17)
+Host is up.
+Nmap scan report for i59F47B12.versanet.de (89.244.123.18)
+Host is up.
+Nmap scan report for i59F47B13.versanet.de (89.244.123.19)
+Host is up.
+Nmap scan report for i59F47B14.versanet.de (89.244.123.20)
+Host is up.
+Nmap scan report for i59F47B15.versanet.de (89.244.123.21)
+Host is up.
+Nmap scan report for i59F47B16.versanet.de (89.244.123.22)
+Host is up.
+Nmap scan report for i59F47B17.versanet.de (89.244.123.23)
+Host is up.
+Nmap scan report for i59F47B18.versanet.de (89.244.123.24)
+Host is up.
+Nmap scan report for i59F47B19.versanet.de (89.244.123.25)
+Host is up.
+Nmap scan report for i59F47B1A.versanet.de (89.244.123.26)
+Host is up.
+Nmap scan report for i59F47B1B.versanet.de (89.244.123.27)
+Host is up.
+Nmap scan report for i59F47B1C.versanet.de (89.244.123.28)
+Host is up.
+Nmap scan report for i59F47B1D.versanet.de (89.244.123.29)
+Host is up.
+Nmap scan report for i59F47B1E.versanet.de (89.244.123.30)
+Host is up.
+Nmap scan report for i59F47B1F.versanet.de (89.244.123.31)
+Host is up.
+Nmap scan report for i59F47B20.versanet.de (89.244.123.32)
+Host is up.
+Nmap scan report for i59F47B21.versanet.de (89.244.123.33)
+Host is up.
+Nmap scan report for i59F47B22.versanet.de (89.244.123.34)
+Host is up.
+Nmap scan report for i59F47B23.versanet.de (89.244.123.35)
+Host is up.
+Nmap scan report for i59F47B24.versanet.de (89.244.123.36)
+Host is up.
+Nmap scan report for i59F47B25.versanet.de (89.244.123.37)
+Host is up.
+Nmap scan report for i59F47B26.versanet.de (89.244.123.38)
+Host is up.
+Nmap scan report for i59F47B27.versanet.de (89.244.123.39)
+Host is up.
+Nmap scan report for i59F47B28.versanet.de (89.244.123.40)
+Host is up.
+Nmap scan report for i59F47B29.versanet.de (89.244.123.41)
+Host is up.
+Nmap scan report for i59F47B2A.versanet.de (89.244.123.42)
+Host is up.
+Nmap scan report for i59F47B2B.versanet.de (89.244.123.43)
+Host is up.
+Nmap scan report for i59F47B2C.versanet.de (89.244.123.44)
+Host is up.
+Nmap scan report for i59F47B2D.versanet.de (89.244.123.45)
+Host is up.
+Nmap scan report for i59F47B2E.versanet.de (89.244.123.46)
+Host is up.
+Nmap scan report for i59F47B2F.versanet.de (89.244.123.47)
+Host is up.
+Nmap scan report for i59F47B30.versanet.de (89.244.123.48)
+Host is up.
+Nmap scan report for i59F47B31.versanet.de (89.244.123.49)
+Host is up.
+Nmap scan report for i59F47B32.versanet.de (89.244.123.50)
+Host is up.
+Nmap scan report for i59F47B33.versanet.de (89.244.123.51)
+Host is up.
+Nmap scan report for i59F47B34.versanet.de (89.244.123.52)
+Host is up.
+Nmap scan report for i59F47B35.versanet.de (89.244.123.53)
+Host is up.
+Nmap scan report for i59F47B36.versanet.de (89.244.123.54)
+Host is up.
+Nmap scan report for i59F47B37.versanet.de (89.244.123.55)
+Host is up.
+Nmap scan report for i59F47B38.versanet.de (89.244.123.56)
+Host is up.
+Nmap scan report for i59F47B39.versanet.de (89.244.123.57)
+Host is up.
+Nmap scan report for i59F47B3A.versanet.de (89.244.123.58)
+Host is up.
+Nmap scan report for i59F47B3B.versanet.de (89.244.123.59)
+Host is up.
+Nmap scan report for i59F47B3C.versanet.de (89.244.123.60)
+Host is up.
+Nmap scan report for i59F47B3D.versanet.de (89.244.123.61)
+Host is up.
+Nmap scan report for i59F47B3E.versanet.de (89.244.123.62)
+Host is up.
+Nmap scan report for i59F47B3F.versanet.de (89.244.123.63)
+Host is up.
+Nmap scan report for i59F47B40.versanet.de (89.244.123.64)
+Host is up.
+Nmap scan report for i59F47B41.versanet.de (89.244.123.65)
+Host is up.
+Nmap scan report for i59F47B42.versanet.de (89.244.123.66)
+Host is up.
+Nmap scan report for i59F47B43.versanet.de (89.244.123.67)
+Host is up.
+Nmap scan report for i59F47B44.versanet.de (89.244.123.68)
+Host is up.
+Nmap scan report for i59F47B45.versanet.de (89.244.123.69)
+Host is up.
+Nmap scan report for i59F47B46.versanet.de (89.244.123.70)
+Host is up.
+Nmap scan report for i59F47B47.versanet.de (89.244.123.71)
+Host is up.
+Nmap scan report for i59F47B48.versanet.de (89.244.123.72)
+Host is up.
+Nmap scan report for i59F47B49.versanet.de (89.244.123.73)
+Host is up.
+Nmap scan report for i59F47B4A.versanet.de (89.244.123.74)
+Host is up.
+Nmap scan report for i59F47B4B.versanet.de (89.244.123.75)
+Host is up.
+Nmap scan report for i59F47B4C.versanet.de (89.244.123.76)
+Host is up.
+Nmap scan report for i59F47B4D.versanet.de (89.244.123.77)
+Host is up.
+Nmap scan report for i59F47B4E.versanet.de (89.244.123.78)
+Host is up.
+Nmap scan report for i59F47B4F.versanet.de (89.244.123.79)
+Host is up.
+Nmap scan report for i59F47B50.versanet.de (89.244.123.80)
+Host is up.
+Nmap scan report for i59F47B51.versanet.de (89.244.123.81)
+Host is up.
+Nmap scan report for i59F47B52.versanet.de (89.244.123.82)
+Host is up.
+Nmap scan report for i59F47B53.versanet.de (89.244.123.83)
+Host is up.
+Nmap scan report for i59F47B54.versanet.de (89.244.123.84)
+Host is up.
+Nmap scan report for i59F47B55.versanet.de (89.244.123.85)
+Host is up.
+Nmap scan report for i59F47B56.versanet.de (89.244.123.86)
+Host is up.
+Nmap scan report for i59F47B57.versanet.de (89.244.123.87)
+Host is up.
+Nmap scan report for i59F47B58.versanet.de (89.244.123.88)
+Host is up.
+Nmap scan report for i59F47B59.versanet.de (89.244.123.89)
+Host is up.
+Nmap scan report for i59F47B5A.versanet.de (89.244.123.90)
+Host is up.
+Nmap scan report for i59F47B5B.versanet.de (89.244.123.91)
+Host is up.
+Nmap scan report for i59F47B5C.versanet.de (89.244.123.92)
+Host is up.
+Nmap scan report for i59F47B5D.versanet.de (89.244.123.93)
+Host is up.
+Nmap scan report for i59F47B5E.versanet.de (89.244.123.94)
+Host is up.
+Nmap scan report for i59F47B5F.versanet.de (89.244.123.95)
+Host is up.
+Nmap scan report for i59F47B60.versanet.de (89.244.123.96)
+Host is up.
+Nmap scan report for i59F47B61.versanet.de (89.244.123.97)
+Host is up.
+Nmap scan report for i59F47B62.versanet.de (89.244.123.98)
+Host is up.
+Nmap scan report for i59F47B63.versanet.de (89.244.123.99)
+Host is up.
+Nmap scan report for i59F47B64.versanet.de (89.244.123.100)
+Host is up.
+Nmap scan report for i59F47B65.versanet.de (89.244.123.101)
+Host is up.
+Nmap scan report for i59F47B66.versanet.de (89.244.123.102)
+Host is up.
+Nmap scan report for i59F47B67.versanet.de (89.244.123.103)
+Host is up.
+Nmap scan report for i59F47B68.versanet.de (89.244.123.104)
+Host is up.
+Nmap scan report for i59F47B69.versanet.de (89.244.123.105)
+Host is up.
+Nmap scan report for i59F47B6A.versanet.de (89.244.123.106)
+Host is up.
+Nmap scan report for i59F47B6B.versanet.de (89.244.123.107)
+Host is up.
+Nmap scan report for i59F47B6C.versanet.de (89.244.123.108)
+Host is up.
+Nmap scan report for i59F47B6D.versanet.de (89.244.123.109)
+Host is up.
+Nmap scan report for i59F47B6E.versanet.de (89.244.123.110)
+Host is up.
+Nmap scan report for i59F47B6F.versanet.de (89.244.123.111)
+Host is up.
+Nmap scan report for i59F47B70.versanet.de (89.244.123.112)
+Host is up.
+Nmap scan report for i59F47B71.versanet.de (89.244.123.113)
+Host is up.
+Nmap scan report for i59F47B72.versanet.de (89.244.123.114)
+Host is up.
+Nmap scan report for i59F47B73.versanet.de (89.244.123.115)
+Host is up.
+Nmap scan report for i59F47B74.versanet.de (89.244.123.116)
+Host is up.
+Nmap scan report for i59F47B75.versanet.de (89.244.123.117)
+Host is up.
+Nmap scan report for i59F47B76.versanet.de (89.244.123.118)
+Host is up.
+Nmap scan report for i59F47B77.versanet.de (89.244.123.119)
+Host is up.
+Nmap scan report for i59F47B78.versanet.de (89.244.123.120)
+Host is up.
+Nmap scan report for i59F47B79.versanet.de (89.244.123.121)
+Host is up.
+Nmap scan report for i59F47B7A.versanet.de (89.244.123.122)
+Host is up.
+Nmap scan report for i59F47B7B.versanet.de (89.244.123.123)
+Host is up.
+Nmap scan report for i59F47B7C.versanet.de (89.244.123.124)
+Host is up.
+Nmap scan report for i59F47B7D.versanet.de (89.244.123.125)
+Host is up.
+Nmap scan report for i59F47B7E.versanet.de (89.244.123.126)
+Host is up.
+Nmap scan report for i59F47B7F.versanet.de (89.244.123.127)
+Host is up.
+Nmap scan report for i59F47B80.versanet.de (89.244.123.128)
+Host is up.
+Nmap scan report for i59F47B81.versanet.de (89.244.123.129)
+Host is up.
+Nmap scan report for i59F47B82.versanet.de (89.244.123.130)
+Host is up.
+Nmap scan report for i59F47B83.versanet.de (89.244.123.131)
+Host is up.
+Nmap scan report for i59F47B84.versanet.de (89.244.123.132)
+Host is up.
+Nmap scan report for i59F47B85.versanet.de (89.244.123.133)
+Host is up.
+Nmap scan report for i59F47B86.versanet.de (89.244.123.134)
+Host is up.
+Nmap scan report for i59F47B87.versanet.de (89.244.123.135)
+Host is up.
+Nmap scan report for i59F47B88.versanet.de (89.244.123.136)
+Host is up.
+Nmap scan report for i59F47B89.versanet.de (89.244.123.137)
+Host is up.
+Nmap scan report for i59F47B8A.versanet.de (89.244.123.138)
+Host is up.
+Nmap scan report for i59F47B8B.versanet.de (89.244.123.139)
+Host is up.
+Nmap scan report for i59F47B8C.versanet.de (89.244.123.140)
+Host is up.
+Nmap scan report for i59F47B8D.versanet.de (89.244.123.141)
+Host is up.
+Nmap scan report for i59F47B8E.versanet.de (89.244.123.142)
+Host is up.
+Nmap scan report for i59F47B8F.versanet.de (89.244.123.143)
+Host is up.
+Nmap scan report for i59F47B90.versanet.de (89.244.123.144)
+Host is up.
+Nmap scan report for i59F47B91.versanet.de (89.244.123.145)
+Host is up.
+Nmap scan report for i59F47B92.versanet.de (89.244.123.146)
+Host is up.
+Nmap scan report for i59F47B93.versanet.de (89.244.123.147)
+Host is up.
+Nmap scan report for i59F47B94.versanet.de (89.244.123.148)
+Host is up.
+Nmap scan report for i59F47B95.versanet.de (89.244.123.149)
+Host is up.
+Nmap scan report for i59F47B96.versanet.de (89.244.123.150)
+Host is up.
+Nmap scan report for i59F47B97.versanet.de (89.244.123.151)
+Host is up.
+Nmap scan report for i59F47B98.versanet.de (89.244.123.152)
+Host is up.
+Nmap scan report for i59F47B99.versanet.de (89.244.123.153)
+Host is up.
+Nmap scan report for i59F47B9A.versanet.de (89.244.123.154)
+Host is up.
+Nmap scan report for i59F47B9B.versanet.de (89.244.123.155)
+Host is up.
+Nmap scan report for i59F47B9C.versanet.de (89.244.123.156)
+Host is up.
+Nmap scan report for i59F47B9D.versanet.de (89.244.123.157)
+Host is up.
+Nmap scan report for i59F47B9E.versanet.de (89.244.123.158)
+Host is up.
+Nmap scan report for i59F47B9F.versanet.de (89.244.123.159)
+Host is up.
+Nmap scan report for i59F47BA0.versanet.de (89.244.123.160)
+Host is up.
+Nmap scan report for i59F47BA1.versanet.de (89.244.123.161)
+Host is up.
+Nmap scan report for i59F47BA2.versanet.de (89.244.123.162)
+Host is up.
+Nmap scan report for i59F47BA3.versanet.de (89.244.123.163)
+Host is up.
+Nmap scan report for i59F47BA4.versanet.de (89.244.123.164)
+Host is up.
+Nmap scan report for i59F47BA5.versanet.de (89.244.123.165)
+Host is up.
+Nmap scan report for i59F47BA6.versanet.de (89.244.123.166)
+Host is up.
+Nmap scan report for i59F47BA7.versanet.de (89.244.123.167)
+Host is up.
+Nmap scan report for i59F47BA8.versanet.de (89.244.123.168)
+Host is up.
+Nmap scan report for i59F47BA9.versanet.de (89.244.123.169)
+Host is up.
+Nmap scan report for i59F47BAA.versanet.de (89.244.123.170)
+Host is up.
+Nmap scan report for i59F47BAB.versanet.de (89.244.123.171)
+Host is up.
+Nmap scan report for i59F47BAC.versanet.de (89.244.123.172)
+Host is up.
+Nmap scan report for i59F47BAD.versanet.de (89.244.123.173)
+Host is up.
+Nmap scan report for i59F47BAE.versanet.de (89.244.123.174)
+Host is up.
+Nmap scan report for i59F47BAF.versanet.de (89.244.123.175)
+Host is up.
+Nmap scan report for i59F47BB0.versanet.de (89.244.123.176)
+Host is up.
+Nmap scan report for i59F47BB1.versanet.de (89.244.123.177)
+Host is up.
+Nmap scan report for i59F47BB2.versanet.de (89.244.123.178)
+Host is up.
+Nmap scan report for i59F47BB3.versanet.de (89.244.123.179)
+Host is up.
+Nmap scan report for i59F47BB4.versanet.de (89.244.123.180)
+Host is up.
+Nmap scan report for i59F47BB5.versanet.de (89.244.123.181)
+Host is up.
+Nmap scan report for i59F47BB6.versanet.de (89.244.123.182)
+Host is up.
+Nmap scan report for i59F47BB7.versanet.de (89.244.123.183)
+Host is up.
+Nmap scan report for i59F47BB8.versanet.de (89.244.123.184)
+Host is up.
+Nmap scan report for i59F47BB9.versanet.de (89.244.123.185)
+Host is up.
+Nmap scan report for i59F47BBA.versanet.de (89.244.123.186)
+Host is up.
+Nmap scan report for i59F47BBB.versanet.de (89.244.123.187)
+Host is up.
+Nmap scan report for i59F47BBC.versanet.de (89.244.123.188)
+Host is up.
+Nmap scan report for i59F47BBD.versanet.de (89.244.123.189)
+Host is up.
+Nmap scan report for i59F47BBE.versanet.de (89.244.123.190)
+Host is up.
+Nmap scan report for i59F47BBF.versanet.de (89.244.123.191)
+Host is up.
+Nmap scan report for i59F47BC0.versanet.de (89.244.123.192)
+Host is up.
+Nmap scan report for i59F47BC1.versanet.de (89.244.123.193)
+Host is up.
+Nmap scan report for i59F47BC2.versanet.de (89.244.123.194)
+Host is up.
+Nmap scan report for i59F47BC3.versanet.de (89.244.123.195)
+Host is up.
+Nmap scan report for i59F47BC4.versanet.de (89.244.123.196)
+Host is up.
+Nmap scan report for i59F47BC5.versanet.de (89.244.123.197)
+Host is up.
+Nmap scan report for i59F47BC6.versanet.de (89.244.123.198)
+Host is up.
+Nmap scan report for i59F47BC7.versanet.de (89.244.123.199)
+Host is up.
+Nmap scan report for i59F47BC8.versanet.de (89.244.123.200)
+Host is up.
+Nmap scan report for i59F47BC9.versanet.de (89.244.123.201)
+Host is up.
+Nmap scan report for i59F47BCA.versanet.de (89.244.123.202)
+Host is up.
+Nmap scan report for i59F47BCB.versanet.de (89.244.123.203)
+Host is up.
+Nmap scan report for i59F47BCC.versanet.de (89.244.123.204)
+Host is up.
+Nmap scan report for i59F47BCD.versanet.de (89.244.123.205)
+Host is up.
+Nmap scan report for i59F47BCE.versanet.de (89.244.123.206)
+Host is up.
+Nmap scan report for i59F47BCF.versanet.de (89.244.123.207)
+Host is up.
+Nmap scan report for i59F47BD0.versanet.de (89.244.123.208)
+Host is up.
+Nmap scan report for i59F47BD1.versanet.de (89.244.123.209)
+Host is up.
+Nmap scan report for i59F47BD2.versanet.de (89.244.123.210)
+Host is up.
+Nmap scan report for i59F47BD3.versanet.de (89.244.123.211)
+Host is up.
+Nmap scan report for i59F47BD4.versanet.de (89.244.123.212)
+Host is up.
+Nmap scan report for i59F47BD5.versanet.de (89.244.123.213)
+Host is up.
+Nmap scan report for i59F47BD6.versanet.de (89.244.123.214)
+Host is up.
+Nmap scan report for i59F47BD7.versanet.de (89.244.123.215)
+Host is up.
+Nmap scan report for i59F47BD8.versanet.de (89.244.123.216)
+Host is up.
+Nmap scan report for i59F47BD9.versanet.de (89.244.123.217)
+Host is up.
+Nmap scan report for i59F47BDA.versanet.de (89.244.123.218)
+Host is up.
+Nmap scan report for i59F47BDB.versanet.de (89.244.123.219)
+Host is up.
+Nmap scan report for i59F47BDC.versanet.de (89.244.123.220)
+Host is up.
+Nmap scan report for i59F47BDD.versanet.de (89.244.123.221)
+Host is up.
+Nmap scan report for i59F47BDE.versanet.de (89.244.123.222)
+Host is up.
+Nmap scan report for i59F47BDF.versanet.de (89.244.123.223)
+Host is up.
+Nmap scan report for i59F47BE0.versanet.de (89.244.123.224)
+Host is up.
+Nmap scan report for i59F47BE1.versanet.de (89.244.123.225)
+Host is up.
+Nmap scan report for i59F47BE2.versanet.de (89.244.123.226)
+Host is up.
+Nmap scan report for i59F47BE3.versanet.de (89.244.123.227)
+Host is up.
+Nmap scan report for i59F47BE4.versanet.de (89.244.123.228)
+Host is up.
+Nmap scan report for i59F47BE5.versanet.de (89.244.123.229)
+Host is up.
+Nmap scan report for i59F47BE6.versanet.de (89.244.123.230)
+Host is up.
+Nmap scan report for i59F47BE7.versanet.de (89.244.123.231)
+Host is up.
+Nmap scan report for i59F47BE8.versanet.de (89.244.123.232)
+Host is up.
+Nmap scan report for i59F47BE9.versanet.de (89.244.123.233)
+Host is up.
+Nmap scan report for i59F47BEA.versanet.de (89.244.123.234)
+Host is up.
+Nmap scan report for i59F47BEB.versanet.de (89.244.123.235)
+Host is up.
+Nmap scan report for i59F47BEC.versanet.de (89.244.123.236)
+Host is up.
+Nmap scan report for i59F47BED.versanet.de (89.244.123.237)
+Host is up.
+Nmap scan report for i59F47BEE.versanet.de (89.244.123.238)
+Host is up.
+Nmap scan report for i59F47BEF.versanet.de (89.244.123.239)
+Host is up.
+Nmap scan report for i59F47BF0.versanet.de (89.244.123.240)
+Host is up.
+Nmap scan report for i59F47BF1.versanet.de (89.244.123.241)
+Host is up.
+Nmap scan report for i59F47BF2.versanet.de (89.244.123.242)
+Host is up.
+Nmap scan report for i59F47BF3.versanet.de (89.244.123.243)
+Host is up.
+Nmap scan report for i59F47BF4.versanet.de (89.244.123.244)
+Host is up.
+Nmap scan report for i59F47BF5.versanet.de (89.244.123.245)
+Host is up.
+Nmap scan report for i59F47BF6.versanet.de (89.244.123.246)
+Host is up.
+Nmap scan report for i59F47BF7.versanet.de (89.244.123.247)
+Host is up.
+Nmap scan report for i59F47BF8.versanet.de (89.244.123.248)
+Host is up.
+Nmap scan report for i59F47BF9.versanet.de (89.244.123.249)
+Host is up.
+Nmap scan report for i59F47BFA.versanet.de (89.244.123.250)
+Host is up.
+Nmap scan report for i59F47BFB.versanet.de (89.244.123.251)
+Host is up.
+Nmap scan report for i59F47BFC.versanet.de (89.244.123.252)
+Host is up.
+Nmap scan report for i59F47BFD.versanet.de (89.244.123.253)
+Host is up.
+Nmap scan report for i59F47BFE.versanet.de (89.244.123.254)
+Host is up.
+Nmap scan report for i59F47BFF.versanet.de (89.244.123.255)
+Host is up.
+Nmap done: 256 IP addresses (256 hosts up) scanned in 1.00 seconds
