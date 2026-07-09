@@ -1,0 +1,34 @@
+Aufgabe 3: DHCP
+
+a)
+
+Beispiel: Laptop verbindet sich neu mit WLAN, hat noch keine IP-Adresse.
+DHCP-Server im Router vergibt automatisch IP, Subnetzmaske, Gateway, DNS - ohne manuelle Konfiguration.
+
+
+
+b)
+
+Capture-Filter: udp port 67 or udp port 68
+
+Aufnahme:
+No.  Time      Source          Destination      Protocol  Info
+10   88.948965 0.0.0.0         255.255.255.255  DHCP      DHCP Discover
+11   88.961370 192.168.178.1   192.168.178.152  DHCP      DHCP Offer
+12   89.970947 0.0.0.0         255.255.255.255  DHCP      DHCP Request
+13   89.976961 192.168.178.1   192.168.178.152  DHCP      DHCP ACK
+
+
+c)
+
+1. Discover (Client -> Broadcast): Client sucht DHCP-Server, sendet eigene MAC-Adresse
+Felder: Client IP 0.0.0.0, Your IP 0.0.0.0, Client MAC 9a:b3:f6:c8:91:d5, Option 53 = Discover
+
+2. Offer (Server -> Client): Server bietet IP + Lease-Zeit + Subnetzmaske/Gateway/DNS an
+Felder: Your (client) IP 192.168.178.152, Server Identifier 192.168.178.1, Option 53 = Offer
+
+3. Request (Client -> Broadcast): Client fordert angebotene IP explizit an (Broadcast, damit andere Server ihr Angebot zurückziehen)
+Felder: Option 50 Requested IP 192.168.178.152, Option 54 Server Identifier 192.168.178.1, Option 53 = Request
+
+4. Ack (Server -> Client): Server bestätigt Zuweisung endgültig, überträgt finale Konfiguration
+Felder: Your (client) IP 192.168.178.152, Server Identifier 192.168.178.1, Option 53 = ACK

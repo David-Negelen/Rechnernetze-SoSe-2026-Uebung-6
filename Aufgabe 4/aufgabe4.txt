@@ -1,0 +1,13 @@
+Aufgabe 4: Routing
+
+a)
+
+Bellman-Ford: D(d) = min über Nachbar v von (c(x,v) + D_v(d)). Wiederholen bis konvergiert.
+Beispiel A-B-C-D: A-B-C günstiger als A-C direkt (3+2=5 < 23) -> A routet C via B.
+
+DV vs. LS:
+- DV: nur eigener Vektor an Nachbarn, langsam, Count-to-Infinity möglich
+- LS: volle Topologie geflutet, jeder rechnet selbst, schneller, mehr Overhead
+- Hybrid sinnvoll bei großen Netzen:
+  - im kleinen Bereich: Link-State, weil überschaubar und schnell
+  - im großen Bereich: Distanz-Vektor-artig, weil einfacher und nicht jeder alles wissen muss

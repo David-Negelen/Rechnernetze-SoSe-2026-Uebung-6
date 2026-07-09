@@ -1,0 +1,35 @@
+Aufgabe 1: Konzepte
+
+a) Sliding-Window, TCP Tahoe, TCP Reno, TCP Vegas
+
+Sliding Window:
+- Sender darf Empfänger um max. n unbestätigte Pakete voraus sein
+- ACK schiebt Fenster weiter, bei n offenen ACKs blockiert Sender
+- Zweck: kontinuierliches Senden statt Stop-and-Wait, Flusskontrolle
+
+TCP Tahoe:
+- Slow Start: Fenster startet bei 1, wächst exponentiell bis Schwellwert
+- AIMD: lineares Wachstum, bei Verlust (Timeout/3 Duplicate ACKs) Fenster zurück auf 1
+
+TCP Reno:
+- wie Tahoe, aber bei 3 Duplicate ACKs nur Fenster halbieren statt auf 1 (Fast Recovery)
+- bei echtem Timeout weiterhin voller Slow Start
+- New Reno: zusätzlich selektive ACKs
+
+TCP Vegas:
+- misst laufend RTT, erkennt Überlast schon an steigender RTT statt erst bei Verlust
+- proaktiv statt reaktiv, Fenstergröße direkt aus RTT abgeleitet
+- ca. 40% mehr Durchsatz als Reno
+
+
+
+b) Protokolle aus der Vorlesung und ihre OSI-Schicht
+
+TCP: Schicht 4 (Transport): verbindungsorientiert, Ende-zu-Ende zwischen Prozessen (Ports)
+UDP: Schicht 4 (Transport): verbindungslos, Ende-zu-Ende zwischen Prozessen (Ports)
+IP: Schicht 3 (Vermittlung): Adressierung/Routing zwischen Netzen
+ICMP: Schicht 3 (Vermittlung): Steuer-/Fehlermeldungen für IP
+ARP: Schicht 2/3-Grenze: löst IP-Adresse zu MAC-Adresse im lokalen Netz auf
+RARP: Schicht 2/3-Grenze: wie ARP, historisch MAC zu IP
+Routingprotokolle (z.B. RIP/OSPF): Schicht 3 (Vermittlung): Aufbau der Routingtabellen zwischen Routern
+DHCP: Schicht 7 (Anwendung, läuft über UDP): automatische Netzwerkkonfiguration

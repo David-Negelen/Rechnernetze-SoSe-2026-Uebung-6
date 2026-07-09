@@ -1,0 +1,104 @@
+Aufgabe 2:
+
+a)
+Befehl: nmap -v -sn 192.168.178.0/24
+
+Nmap done: 256 IP addresses (39 hosts up) scanned in 47.12 seconds
+
+Ergebnis: 39 aktive Hosts im lokalen Klasse-C-Netz
+
+
+
+b)
+Befehl: sudo nmap -O scanme.nmap.org
+
+Output:
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-09 19:39 +0200
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.11s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 993 closed tcp ports (reset)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+135/tcp   filtered msrpc
+139/tcp   filtered netbios-ssn
+445/tcp   filtered microsoft-ds
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+Device type: general purpose|WAP|storage-misc|load balancer|firewall
+Running (JUST GUESSING): Linux 2.6.X|5.X|4.X (89%), Ubiquiti embedded (89%), Netgear embedded (88%), F5 Networks TMOS 11.1.X (86%), Palo Alto embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:linux:linux_kernel:2.6 cpe:/h:netgear:readynas_3200 cpe:/o:f5:tmos:11.1 cpe:/h:netgear:wndap660 cpe:/o:linux:linux_kernel:5 cpe:/h:paloalto:pa-500 cpe:/o:linux:linux_kernel:4.19
+Aggressive OS guesses: Linux 2.6.32 (89%), Ubiquiti WAP (Linux 2.6.32) (89%), Netgear ReadyNAS 3200 NAS device (Linux 2.6) (88%), Linux 2.6.11 - 2.6.18 (86%), F5 3600 LTM load balancer (86%), Netgear WNDAP660 WAP (Linux 2.6.36) (86%), Linux 5.10 - 5.15 (85%), Palo Alto PA-500 firewall (85%), Linux 4.19 (85%), OpenWrt 21.02 (Linux 5.4) (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 20 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 5.63 seconds
+
+
+
+c)
+Befehl: whois -h whois.publicinterestregistry.org nmap.org
+
+Output:
+Domain Name: nmap.org
+Registry Domain ID: REDACTED
+Registrar WHOIS Server: whois.dynadot.com
+Registrar URL: http://www.dynadot.com
+Updated Date: 2026-04-10T17:35:09Z
+Creation Date: 1999-01-18T05:00:00Z
+Registry Expiry Date: 2029-01-18T05:00:00Z
+Registrar: Dynadot Inc
+Registrar IANA ID: 472
+Registrar Abuse Contact Email: abuse@dynadot.com
+Registrar Abuse Contact Phone: +1.6502620100
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Name Server: ns1.linode.com
+Name Server: ns2.linode.com
+Name Server: ns3.linode.com
+Name Server: ns4.linode.com
+Name Server: ns5.linode.com
+DNSSEC: unsigned
+
+Ergebnis: nmap.org wurde am 18.01.1999 registriert 
+
+
+
+d)
+masscan verwenden:
+
+masscan -p80,443,22,3389,8080 <IP-Bereich> --rate 50000
+
+
+
+e)
+Sendet nur ein SYN-Paket.
+Antwort SYN/ACK = Port offen, RST = Port geschlossen.
+Das abschliessende ACK des 3-Way-Handshakes wird nie gesendet, daher "Half-Open Scan".
+
+Verwendung: Portscanning, schneller und unauffälliger als Connect-Scan, Standard für Security-Audits/Pentests.
+
+
+
+f)
+Befehl: nmap -v -sT scanme.nmap.org
+
+Output:
+Starting Nmap 7.99 ( https://nmap.org )
+Discovered open port 22/tcp on 45.33.32.156
+Discovered open port 80/tcp on 45.33.32.156
+Discovered open port 31337/tcp on 45.33.32.156
+Discovered open port 9929/tcp on 45.33.32.156
+Not shown: 993 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+135/tcp   filtered msrpc
+139/tcp   filtered netbios-ssn
+445/tcp   filtered microsoft-ds
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+Nmap done: 1 IP address (1 host up) scanned in 37.03 seconds
+
+22, 80, 9929 und 31337
