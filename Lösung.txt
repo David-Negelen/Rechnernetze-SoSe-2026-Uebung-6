@@ -1,0 +1,266 @@
+Aufgabe 1
+a)
+Sliding Window:
+Das Sliding-Window-Verfahren ist ein Mechanismus zur Flusskontrolle und zuverlässigen Datenübertragung bei TCP. Der Sender darf mehrere Datenpakete hintereinander übertragen, ohne nach jedem einzelnen Paket auf eine Bestätigung (ACK) warten zu müssen. Die maximale Anzahl gleichzeitig unbestätigter Pakete wird durch die Fenstergröße (Window Size) bestimmt. Sobald eine Bestätigung eingeht, verschiebt sich das Fenster weiter und neue Daten dürfen gesendet werden. Dadurch wird die verfügbare Bandbreite besser ausgenutzt und die Übertragung deutlich effizienter als beim Senden mit sofortigem Warten auf jedes ACK. Gleichzeitig verhindert das Verfahren, dass ein langsamer Empfänger überlastet wird.
+TCP Tahoe:
+TCP Tahoe ist ein Verfahren zur Vermeidung und Behandlung von Netzüberlastungen (Congestion Control). Erkennt TCP Tahoe einen Paketverlust, beispielsweise durch drei gleiche Duplicate ACKs, wird angenommen, dass eine Überlastung im Netzwerk vorliegt. Anschließend wird das verlorene Segment sofort erneut übertragen (Fast Retransmit). Danach setzt Tahoe die Fenstergröße auf 1 Segment zurück und beginnt erneut mit Slow Start. Während Slow Start wächst die Fenstergröße zunächst exponentiell und geht anschließend in das additive Wachstum (AIMD – Additive Increase, Multiplicative Decrease) über. Dadurch wird das Netzwerk nach einer Überlastung vorsichtig wieder ausgelastet.
+TCP Reno:
+TCP Reno erweitert TCP Tahoe und verbessert dessen Verhalten bei Paketverlusten. Nach drei Duplicate ACKs wird das fehlende Segment ebenfalls sofort erneut gesendet (Fast Retransmit). Im Gegensatz zu Tahoe wird die Fenstergröße jedoch nur halbiert und nicht auf 1 zurückgesetzt. Dadurch kann die Datenübertragung wesentlich schneller fortgesetzt werden. Neuere Varianten wie New Reno unterstützen zusätzlich selektive Bestätigungen (Selective ACK), wodurch mehrere verlorene Segmente effizienter erkannt und erneut übertragen werden können. TCP Reno erreicht dadurch einen höheren Datendurchsatz als Tahoe.
+TCP Vegas:
+TCP Vegas verfolgt einen anderen Ansatz als Tahoe und Reno. Anstatt erst auf Paketverluste zu reagieren, versucht Vegas Überlastungen bereits vorher zu erkennen. Dazu misst das Verfahren kontinuierlich die Round-Trip-Time (RTT), also die Zeit zwischen dem Senden eines Segments und dem Empfang der zugehörigen Bestätigung. Steigt diese Zeit deutlich an, erkennt Vegas eine zunehmende Überlastung und reduziert die Fenstergröße bereits bevor Pakete verloren gehen. Zusätzlich kann bei Duplicate ACKs und einer ungewöhnlich langen Übertragungszeit sofort eine erneute Übertragung ausgelöst werden. Durch dieses frühzeitige Eingreifen erreicht TCP Vegas häufig einen höheren Datendurchsatz und verursacht weniger Paketverluste als TCP Reno. In den Vorlesungsfolien wird ein Leistungsgewinn von etwa 40 % gegenüber Reno erwähnt.
+Grafik:
+Sliding Window
+
+Gesendet      Fenster (4 Pakete)          Bestätigt
+
+[1] [2] [3] [4] | [5] [6] [7] [8]
+
+ACK für Paket 1
+
+             ↓ Fenster verschiebt sich
+
+[2] [3] [4] [5] | [6] [7] [8] [9]
+
+
+
+
+b)
+| Protokoll                         | OSI-Schicht                       | Kurze Begründung                                                                                           |
+| --------------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Ethernet (IEEE 802.3)             | Schicht 2 – Sicherungsschicht     | Überträgt Frames innerhalb eines lokalen Netzwerks und verwendet MAC-Adressen.                             |
+| ARP                               | Schicht 3 (Übergang zu Schicht 2) | Ermittelt die MAC-Adresse zu einer IPv4-Adresse, damit IP-Pakete im lokalen Netz zugestellt werden können. |
+| RARP                              | Schicht 3                         | Ermittelt zu einer MAC-Adresse die zugehörige IP-Adresse. Wird heute kaum noch verwendet.                  |
+| IPv4                              | Schicht 3 – Vermittlungsschicht   | Stellt die logische Adressierung und das Routing von Paketen zwischen Netzwerken bereit.                   |
+| IPv6                              | Schicht 3 – Vermittlungsschicht   | Nachfolger von IPv4 mit 128-Bit-Adressen und verbessertem Routing.                                         |
+| ICMP                              | Schicht 3 – Vermittlungsschicht   | Überträgt Fehlermeldungen und Steuerinformationen (z. B. Ping).                                            |
+| ICMPv6                            | Schicht 3 – Vermittlungsschicht   | Entspricht ICMP für IPv6 und übernimmt zusätzlich Neighbor Discovery und SLAAC.                            |
+| NDP (Neighbor Discovery Protocol) | Schicht 3 – Vermittlungsschicht   | Nutzt ICMPv6 zur Erkennung von Nachbarn, Routern und Link-Layer-Adressen.                                  |
+| TCP                               | Schicht 4 – Transportschicht      | Zuverlässige, verbindungsorientierte Datenübertragung mit Fluss- und Staukontrolle.                        |
+| UDP                               | Schicht 4 – Transportschicht      | Verbindungsloses Transportprotokoll mit geringem Overhead und ohne Garantie der Zustellung.                |
+| DNS                               | Schicht 7 – Anwendungsschicht     | Übersetzt Domainnamen in IP-Adressen.                                                                      |
+| DHCP                              | Schicht 7 – Anwendungsschicht     | Vergibt automatisch IP-Adressen und weitere Netzwerkkonfigurationsdaten an Clients.                        |
+| HTTP                              | Schicht 7 – Anwendungsschicht     | Überträgt Webseiten und Webinhalte.                                                                        |
+| HTTPS                             | Schicht 7 – Anwendungsschicht     | HTTP mit TLS-Verschlüsselung für sichere Kommunikation.                                                    |
+| SMTP                              | Schicht 7 – Anwendungsschicht     | Versendet E-Mails zwischen Mailservern.                                                                    |
+| POP3                              | Schicht 7 – Anwendungsschicht     | Lädt E-Mails vom Mailserver herunter.                                                                      |
+| IMAP                              | Schicht 7 – Anwendungsschicht     | Verwaltet E-Mails direkt auf dem Mailserver.                                                               |
+| SSH                               | Schicht 7 – Anwendungsschicht     | Ermöglicht eine sichere verschlüsselte Fernanmeldung und Datenübertragung.                                 |
+| SFTP                              | Schicht 7 – Anwendungsschicht     | Sichere Dateiübertragung über SSH.                                                                         |
+| NTP                               | Schicht 7 – Anwendungsschicht     | Synchronisiert die Uhrzeit zwischen Rechnern im Netzwerk.                                                  |
+| BGP                               | Schicht 3 – Vermittlungsschicht   | Routingprotokoll für den Austausch von Routinginformationen zwischen Autonomen Systemen.                   |
+
+
+
+
+
+
+Aufgabe 2
+a)
+Zunächst wurde mit ipconfig die eigene IPv4-Adresse (192.168.0.38) und die Subnetzmaske (255.255.255.0) ermittelt.
+Daraus ergibt sich das lokale Klasse-C-Netz 192.168.0.0/24. Anschließend wurde mit dem Befehl
+nmap -sn 192.168.0.0/24
+ein Ping-Scan durchgeführt. Der Parameter -sn führt eine Host-Erkennung durch, ohne Ports zu scannen. Dabei wurden 256 IP-Adressen überprüft, von denen 6 Hosts erreichbar waren.
+
+b)
+Zur Bestimmung des Betriebssystems wurde folgender Befehl verwendet:
+nmap -O scanme.nmap.org
+Der Parameter -O aktiviert die Betriebssystemerkennung von Nmap. Dabei werden verschiedene Eigenschaften der TCP/IP-Implementierung analysiert und mit bekannten Betriebssystemprofilen verglichen.
+Das Ergebnis zeigt, dass scanme.nmap.org ein Linux-Betriebssystem verwendet. Eine exakte Kernel-Version konnte nicht eindeutig bestimmt werden, jedoch ergab die Analyse mit hoher Wahrscheinlichkeit Linux (z. B. Linux 4.19–5.15 mit 97 % Übereinstimmung).
+
+c)
+Zur Ermittlung des Registrierungsdatums der Domain wurde unter Windows das Whois-Tool verwendet.
+Verwendeter Befehl:
+whois64.exe nmap.org
+Das Whois-Tool liefert Informationen über die Registrierung einer Domain. In der Ausgabe befindet sich die Zeile:
+Creation Date: 1999-01-18T05:00:00Z
+Daraus ergibt sich, dass die Domain nmap.org am 18. Januar 1999 registriert wurde.
+
+d)
+Um eine größere Menge an IP-Adressen möglichst effizient nach offenen TCP-Ports zu scannen, wurde folgender Befehl verwendet:
+nmap -T4 192.168.0.0/24
+Erklärung der Parameter:
+nmap startet den Netzwerkscan.
+-T4 verwendet ein aggressiveres Timing-Profil und beschleunigt den Scan erheblich. Es eignet sich gut für schnelle und stabile lokale Netzwerke.
+192.168.0.0/24 gibt das gesamte lokale Klasse-C-Netz an, das gescannt werden soll.
+Standardmäßig untersucht Nmap dabei die 1000 häufigsten TCP-Ports jedes erreichbaren Hosts und zeigt offene Ports sowie deren Dienste an.
+
+e)
+Für den SYN-Scan wurde folgender Befehl verwendet:
+nmap -sS scanme.nmap.org
+Erklärung der Parameter:
+nmap startet den Netzwerkscan.
+-sS führt einen SYN-Scan (Half-Open Scan) durch.
+Funktionsweise:
+Beim SYN-Scan sendet Nmap zunächst ein TCP-SYN-Paket an den Zielhost. Antwortet der Host mit einem SYN/ACK, gilt der Port als offen. Anschließend sendet Nmap ein RST-Paket, wodurch die Verbindung sofort beendet wird und der vollständige TCP-Drei-Wege-Handshake nicht abgeschlossen wird. Antwortet der Host stattdessen mit einem RST, ist der Port geschlossen.
+Verwendung:
+Der SYN-Scan dient dazu, offene TCP-Ports schnell und effizient zu erkennen. Da keine vollständige TCP-Verbindung aufgebaut wird, verursacht der Scan weniger Netzwerkverkehr und ist schneller als ein vollständiger TCP-Connect-Scan.
+
+f)
+Bei den durchgeführten Nmap-Scans traten unter anderem folgende offene Ports auf:
+22/TCP (SSH): Sichere Fernanmeldung und Administration von Rechnern.
+80/TCP (HTTP): Bereitstellung und Übertragung von Webseiten.
+53/TCP (DNS): Auflösung von Domainnamen in IP-Adressen.
+135/TCP (MSRPC): Kommunikation zwischen Windows-Diensten.
+139/TCP (NetBIOS-SSN): Netzwerkfreigaben und Dateidienste unter Windows.
+445/TCP (Microsoft-DS/SMB): Datei- und Druckerfreigaben in Windows-Netzwerken.
+Diese Ports gehören zu den häufig verwendeten Netzwerkdiensten und wurden bei den durchgeführten Scans mehrfach als offen erkannt.
+
+
+
+
+
+Aufgabe 3:
+a)
+DHCP (Dynamic Host Configuration Protocol) dient dazu, Geräte in einem Netzwerk automatisch mit den notwendigen Netzwerkeinstellungen zu versorgen.
+Wenn sich ein neues Gerät mit einem WLAN verbindet, besitzt es zunächst keine IP-Adresse und kann daher nicht mit anderen Geräten kommunizieren. Der DHCP-Server weist dem Gerät automatisch eine freie IP-Adresse sowie weitere Informationen wie die Subnetzmaske, das Standard-Gateway und den DNS-Server zu.
+Beispiel:
+Ein Smartphone verbindet sich mit dem WLAN zuhause. Der Router arbeitet als DHCP-Server und vergibt automatisch die IP-Adresse 192.168.178.25, die Subnetzmaske 255.255.255.0, das Gateway 192.168.178.1 und den DNS-Server. Dadurch kann das Smartphone sofort das Internet nutzen, ohne dass der Benutzer etwas konfigurieren muss.
+
+b)
+Capture-Filter:
+port 67 or port 68
+
+c)
+DHCP Request:
+Der Client fordert die Nutzung einer bestimmten IP-Adresse an. Dabei sendet er unter anderem seine MAC-Adresse, 
+die gewünschte IP-Adresse sowie die Transaktions-ID. Der DHCP-Server erkennt dadurch, welcher Client die Adresse anfordert.
+DHCP ACK:
+Der DHCP-Server bestätigt die Vergabe der IP-Adresse. Zusätzlich werden weitere Netzwerkeinstellungen wie Subnetzmaske, Standard-Gateway, DNS-Server und die Lease-Dauer übertragen. 
+Nach dem Empfang kann der Client die IP-Adresse verwenden.
+
+
+
+
+
+Aufgabe 4
+a)
+Der Bellman-Ford-Algorithmus wird bei Distanz-Vektor-Routingverfahren verwendet, um die kürzesten Wege zu allen Netzwerken zu berechnen. Jeder Router kennt zunächst nur die Kosten zu seinen direkten Nachbarn. Alle anderen Ziele gelten zunächst als unbekannt bzw. besitzen unendliche Kosten. Anschließend tauschen benachbarte Router regelmäßig ihre Routingtabellen miteinander aus. Für jedes Ziel berechnet ein Router, ob der Weg über einen Nachbarn günstiger ist als der bisher bekannte Weg. Dabei gilt die Regel:
+Neue Kosten = Kosten zum Nachbarn + Kosten des Nachbarn zum Ziel
+Ist der neue Weg günstiger, wird der Eintrag in der Routingtabelle aktualisiert. Dieser Vorgang wird so lange wiederholt, bis sich keine Werte mehr ändern und alle Router die kürzesten Wege zu jedem Ziel kennen. Jeder Router speichert dabei lediglich die Kosten zum Ziel und den nächsten Router (Next Hop).
+Im gegebenen Beispiel kennt A zunächst nur B mit Kosten 3 und C mit Kosten 23. B kennt A mit Kosten 3 und C mit Kosten 2. C kennt A mit Kosten 23, B mit Kosten 2 und D mit Kosten 5. D kennt zunächst nur C mit Kosten 5.
+Nach dem ersten Austausch erkennt A, dass der Weg zu C über B nur 3 + 2 = 5 kostet und damit günstiger ist als die direkte Verbindung mit Kosten 23. Deshalb wird der Eintrag aktualisiert. Ebenso erkennt B den günstigsten Weg zu D über C mit Kosten 2 + 5 = 7. Router D lernt über C die Wege zu B mit Kosten 7 und zu A mit Kosten 10 kennen. Nach mehreren Austauschrunden besitzen alle Router schließlich die endgültigen kürzesten Wege.
+Beim Distanz-Vektor-Verfahren kennt jeder Router nur seine direkten Nachbarn und tauscht regelmäßig seine Routingtabelle mit ihnen aus. Die Berechnung erfolgt mithilfe des Bellman-Ford-Algorithmus. Das Verfahren benötigt wenig Speicher und ist einfach umzusetzen, reagiert jedoch langsamer auf Änderungen und kann Routing-Schleifen verursachen.
+Beim Link-State-Verfahren sammelt jeder Router Informationen über alle Verbindungen im Netzwerk und erstellt daraus eine vollständige Netzwerkkarte. Anschließend berechnet jeder Router mit dem Dijkstra-Algorithmus selbstständig den kürzesten Weg zu jedem Ziel. Dadurch reagiert das Verfahren schneller auf Änderungen und vermeidet viele Probleme des Distanz-Vektor-Verfahrens, benötigt jedoch mehr Speicher und Rechenleistung.
+Eine hybride Nutzung beider Verfahren ist besonders in großen Netzwerken sinnvoll. Link-State-Protokolle werden häufig im Backbone oder in großen Netzen eingesetzt, da sie schnell auf Änderungen reagieren. Distanz-Vektor-Protokolle eignen sich dagegen für kleinere oder weniger komplexe Netzwerke, da sie einfacher und ressourcenschonender sind. Durch die Kombination beider Verfahren können deren jeweilige Vorteile genutzt werden.
+
+b)
+Von x
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     0 |       |       |
+| zu y |       |     3 |       |
+| zu z |       |       |     7 |
+
+Von y
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     3 |       |       |
+| zu y |       |     0 |       |
+| zu z |       |       |     1 |
+
+Von z
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     7 |       |       |
+| zu y |       |     1 |       |
+| zu z |       |       |     0 |
+
+
+Nach Austausch mit Nachbarn:
+Von x
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     0 |     6 |    14 |
+| zu y |       |     3 |     8 |
+| zu z |       |     4 |     7 |
+
+Von y
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     3 |       |     8 |
+| zu y |     6 |     0 |     2 |
+| zu z |    10 |       |     1 |
+
+Von z
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     7 |     4 |       |
+| zu y |    10 |     1 |       |
+| zu z |    14 |     2 |     0 |
+
+Endgültige Routingtabellen:
+Von x
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     0 |     6 |    11 |
+| zu y |       |     3 |     8 |
+| zu z |       |     4 |     7 |
+
+Von y
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     3 |       |     5 |
+| zu y |     6 |     0 |     2 |
+| zu z |    10 |       |     1 |
+
+Von z
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     7 |     4 |       |
+| zu y |    10 |     1 |       |
+| zu z |    11 |     2 |     0 |
+
+Kostengünstigster Weg von z nach x:
+z → y → x
+Kosten:
+1 + 3 = 4
+Also ist der günstigste Pfad von z nach x über y mit Gesamtkosten 4.
+
+c)
+Neue Kanten:
+x–y = 7
+y–z = 1
+x–z = 7
+
+Neue endgültige Routingtabellen:
+Von x
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     0 |    14 |    14 |
+| zu y |       |     7 |     8 |
+| zu z |       |     8 |     7 |
+
+Von y
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     7 |       |     8 |
+| zu y |    14 |     0 |     2 |
+| zu z |    14 |       |     1 |
+
+Von z
+| Ziel | via x | via y | via z |
+| ---- | ----: | ----: | ----: |
+| zu x |     7 |     8 |       |
+| zu y |    14 |     1 |       |
+| zu z |    14 |     2 |     0 |
+
+Kostengünstigster Pfad von z nach x
+
+Vorher war der beste Weg:
+z → y → x mit Kosten 1 + 3 = 4
+Nach der Änderung:
+direkt: z → x = 7
+über y: z → y → x = 1 + 7 = 8
+Also ist der neue günstigste Pfad:
+z → x
+mit Kosten 7.
+Ja, der kostengünstigste Pfad ändert sich: vorher über y, jetzt direkt über x.
+
+Ergebnis: Durch die Erhöhung der Kosten der Verbindung zwischen x und y von 3 auf 7 ist der direkte Weg z → x mit Kosten 7 nun günstiger als der Weg z → y → x mit Kosten 8. 
+Der kostengünstigste Pfad ändert sich daher vom indirekten Weg über y auf die direkte Verbindung z → x.
+
+d)
+Wenn Router D ausfällt, unterscheiden sich Distanz-Vektor- und Link-State-Verfahren deutlich darin, wie schnell die anderen Router dies erkennen.
+Bei einem Distanz-Vektor-Verfahren kennen die Router nicht die vollständige Struktur des Netzwerks, sondern nur die Informationen, die sie regelmäßig von ihren direkten Nachbarn erhalten. Wenn D ausfällt, merkt zuerst nur der direkte Nachbar von D, dass die Verbindung nicht mehr funktioniert. Danach muss diese Information Schritt für Schritt über Routingtabellen an die anderen Router weitergegeben werden. Dadurch kann es länger dauern, bis alle Router wissen, dass D nicht mehr erreichbar ist. Außerdem können zwischenzeitlich falsche Routen entstehen, weil ein Router eventuell glaubt, ein anderer Router kenne noch einen Weg zu D. Das kann zu Routing-Schleifen oder zum Count-to-Infinity-Problem führen.
+Bei einem Link-State-Verfahren erkennt ebenfalls zuerst der direkte Nachbar, dass die Verbindung zu D ausgefallen ist. Danach wird diese Änderung aber als Link-State-Information an alle Router im Netzwerk verteilt. Jeder Router aktualisiert seine Netzwerkkarte und berechnet die kürzesten Wege neu. Dadurch merken alle Router deutlich schneller und zuverlässiger, dass D nicht mehr erreichbar ist.
+Zusammenfassend erkennt beim Distanz-Vektor-Verfahren zuerst nur der Nachbar von D den Ausfall, und die Information verbreitet sich langsam über die Routingtabellen. Beim Link-State-Verfahren wird der Ausfall schnell an alle Router gemeldet, sodass alle Router nach kurzer Zeit wissen, dass keine Verbindung mehr zu D möglich ist.
